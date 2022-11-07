@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URK20CS2100
+    </title>
+    <style>
+        body {
+            background-color: rgb(255, 183, 27);
+        }
+        
+        hr {
+            border-radius: 30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script>
+        var ap = angular.module('q2', ['ngRoute']);
+        ap.config(function($routeProvider) {
+            $routeProvider.when('/one', {
+                    templateUrl:'2093.html'
+                })
+                .when('/two', {
+                    templateUrl: '2095.html'
+                })
+                .when('/three', {
+                    templateUrl: 'https://studdben.github.io/WebTechlab/Expt9B.html#!/three'
+                })
+                .when('/four', {
+                    templateUrl: '2100.html'
+                });
+
+        });
+    </script>
+</head>
+
+<body>
+        <hr>
+        <div ng-app="q2" align="center">
+            <h2 align="center" style="color: rgb(255, 255, 255);">Click Any Register Number to view student's profile</h4>
+                <a href="#!one">URK20CS2093</a><br><br>
+                <a href="#!two">URK20CS2095</a><br><br>
+                <a href="#!three">URK20CS2099</a><br><br>
+                <a href="#!four">URK20CS2100</a><br><br>
+                <div ng-view></div>
+        </div>
+</body>
+
+</html>
